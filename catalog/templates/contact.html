@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Linking UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <!-- Custom inline styles -->
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #ff5858); /* Background gradient for the entire page */
+            color: #f0f0f0; /* Main text color */
+            margin: 0; /* Remove default body margins */
+            padding: 0;
+            min-height: 100vh; /* Minimum height of the page - 100% of viewport height */
+        }
+
+        h1 {
+            color: #fff; /* Header text color */
+        }
+
+        p {
+            font-size: 18px; /* Paragraph font size */
+            margin-bottom: 20px;
+        }
+
+        .uk-container {
+            background: linear-gradient(135deg, #ff7e5f, #ff5858); /* Gradient background for the container */
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for the card effect */
+        }
+
+        .uk-form-label {
+            font-weight: bold;
+            color: #f0f0f0; /* Label text color */
+        }
+
+        .uk-input, .uk-textarea {
+            border: 2px solid #fff; /* Input field border color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .uk-input:focus, .uk-textarea:focus {
+            border-color: #264653; /* Border color on focus */
+            box-shadow: 0 0 8px rgba(42, 157, 143, 0.4); /* Shadow effect on focus */
+        }
+
+        .uk-button-primary {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for the button */
+            border: 1px solid #fff; /* White border */
+            border-radius: 40px; /* Rounded corners for the button */
+            color: #fff; /* White text color */
+            padding: 0.5rem 1.5rem;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .uk-button-primary:hover {
+            background-color: rgba(255, 255, 255, 0.4); /* Lighter background on hover */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="uk-container">
+        <!-- Page heading -->
+        <h1 class="uk-heading-divider">Contact Information</h1>
+        <p>You can contact us at: example@example.com</p>
+
+        <!-- Contact form -->
+        <form class="uk-form-stacked uk-margin-large-top">
+            <!-- Name input field -->
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Name</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Your name">
+                </div>
+            </div>
+
+            <!-- Email input field -->
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-email">Email</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-email" type="email" placeholder="Your email">
+                </div>
+            </div>
+
+            <!-- Message text area -->
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-message">Message</label>
+                <div class="uk-form-controls">
+                    <textarea class="uk-textarea" id="form-stacked-message" rows="5" placeholder="Your message"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button class="uk-button uk-button-primary" type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Linking UIkit JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
