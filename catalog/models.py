@@ -28,6 +28,7 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name="Purchase Price"
     )
+    manufactured_at = models.DateField(verbose_name="Manufacture Date", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Updated At")
 
