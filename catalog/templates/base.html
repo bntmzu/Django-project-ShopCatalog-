@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link href="{%  static 'bootstrap.min.css' %} " rel="stylesheet">
+</head>
+<body>
+
+  <!-- Включаем шаблон меню -->
+  {% include 'navbar.html' %}
+
+  <!-- Основной контент страницы -->
+  <div class="container mt-5">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Подключаем Bootstrap JavaScript -->
+  <script src="{%  static 'bootstrap.bundle.min.js' %} "></script>
+</body>
+</html>

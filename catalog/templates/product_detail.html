@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.name }}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-4">{{ object.name }}</h1>
+        <p class="text-muted">{{ object.category.name }}</p>
+        <hr>
+        <p><strong>Description:</strong> {{ object.description }}</p>
+        <p><strong>Price:</strong> ${{ object.price }}</p>
+        <p><strong>Created At:</strong> {{ object.created_at }}</p>
+        <p><strong>Updated At:</strong> {{ object.updated_at }}</p>
+        {% if object.image %}
+            <img src="{{ object.image.url }}" alt="{{ object.name }}" class="img-fluid">
+        {% endif %}
+        <a href="{% url 'catalog:home' %}" class="btn btn-primary mt-4">Back to Product List</a>
+    </div>
+
+    <script src="{%  static 'bootstrap.bundle.min.js' %} "></script>
+</body>
+</html>
